@@ -1,0 +1,47 @@
+@import '@fontsource/dancing-script/index.css';
+
+.main{
+    width: 60vw;
+    background: #efcb79;
+}
+.headerText{
+    font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
+}
+.contents{
+    background-color: rgb(182, 216, 245);
+    width:30px;
+
+}
+.contents>p{
+    font: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:7px;
+}
+.contents>p:hover{
+    background-color: #ffffff89;
+    cursor: pointer;
+}
+.getContents{
+    justify-content: space-evenly;
+}
+.getContents> button:hover{
+    background-color: #ffffff89;
+    cursor: pointer;
+}
+.getContents:button{
+    padding:6px 3px;
+    margin:1vw 2vw ;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+.icons>img{
+    padding-inline:10px;
+}
+.svg> img{
+    margin-inline: 5px;
+}

@@ -1,4 +1,4 @@
-export default function TrainingText(){
+export default function     TrainingText(){
     return (
                 <p className='px-[20px] font-thin md:text-xl md:mt-[-40px]
                          lg:mt-[20px] lg:mb-[20px]'>

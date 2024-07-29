@@ -117,7 +117,9 @@ function Register(){
                         validationSchema={userSchema}
                         onSubmit={submitForm}>
 
-                        {({values, errors,handleChange,handleBlur,touched}) => (
+                        {({values, errors,
+                              handleChange,handleBlur
+                              ,touched}) => (
                             <Form>
                                 <div className='flex justify-center items-center flex-col mt-[7vh]'>
                                     <div className=''>
@@ -126,7 +128,7 @@ function Register(){
                                         </p>
                                         <Field
                                             className='px-[4vw] sm:w-[40vw]  xl:w-[45vw] 
-                                            lg:py-[1vw] lg:px-[2vw] lg:w-[45vw] lg:py-[0.7vw]
+                                            lg:py-[1vw] lg:px-[2vw] lg:w-[45vw] md:py-[0.7vw]
                                             py-[3vw] s sm:py-[20px] rounded-[10px]'
                                             placeholder='email'
                                             type='email'
@@ -144,7 +146,7 @@ function Register(){
                                         </p>
                                         <Field
                                          className='px-[4vw] sm:w-[40vw]  xl:w-[45vw] 
-                                         lg:py-[1vw] lg:px-[2vw] lg:w-[45vw] lg:py-[0.7vw]
+                                         xl:py-[1vw] lg:px-[2vw] lg:w-[45vw] lg:py-[0.7vw]
                                           py-[3vw] s sm:py-[20px] rounded-[10px]'
                                             placeholder='📞Phone'
                                             type='number'
@@ -162,7 +164,7 @@ function Register(){
                                         </p>
                                         <Field
                                             className='px-[4vw] sm:w-[40vw]  xl:w-[45vw] 
-                                            lg:py-[1vw] lg:px-[2vw] lg:w-[45vw] lg:py-[0.7vw]
+                                            xl:py-[1vw] lg:px-[2vw] lg:w-[45vw] lg:py-[0.7vw]
                                             py-[3vw] s sm:py-[20px] rounded-[10px]'
                                             placeholder='password'
                                             type='password'

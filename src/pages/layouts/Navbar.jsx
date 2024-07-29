@@ -1,10 +1,10 @@
-import styles from '../App.module.css';
+import styles from '../../App.module.css';
 import {useState} from 'react';
 import Hamburger from 'hamburger-react';
-import  Facebook from '../assets/fb.svg'
-import Insta from '../assets/insta (3).png'
-import Youtube from '../assets/youtube.png'
-import image from '../assets/background-white.jpeg'
+import  Facebook from '../../assets/fb.svg'
+import Insta from '../../assets/insta (3).png'
+import Youtube from '../../assets/youtube.png'
+import image from '../../assets/background-white.jpeg'
 import {useNavigate} from "react-router-dom";
 const Navbar = () => {
     const Navigate = useNavigate()
@@ -34,8 +34,8 @@ const Navbar = () => {
                             <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/home')}}>Home</li>
                             <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/training')}}>Training</li>
                             <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/coaching')}}>Coaching</li>
-                            <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/coaching')}}>Blog</li>
-                            <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/coaching')}}>Contact</li>
+                            <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/blog')}}>Blog</li>
+                            <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/contact')}}>Contact</li>
                         </div>
                     </div>
                     {menuOpen && (
@@ -43,8 +43,8 @@ const Navbar = () => {
                             <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/home')}}>Home</li>
                             <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/training')}}>Training</li>
                             <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/coaching')}}>Coaching</li>
-                            <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/coaching')}}>Blog</li>
-                            <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/coaching')}}>Contact</li>
+                            <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/blog')}}>Blog</li>
+                            <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/contact')}}>Contact</li>
                         </ul>
                     )}
                 </div>

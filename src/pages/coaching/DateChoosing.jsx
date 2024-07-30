@@ -49,7 +49,7 @@ export default function DateChoosing() {
                             {touched.date && errors.date && <div className="text-red-500">{errors.date}</div>}
 
                             <label htmlFor="message">Message</label>
-                            <Field name="message" as="textarea" className={'border-2 h-52'} />
+                            <Field name="message" as="textarea" className={'border-2 h-52'} />n
                             <ErrorMessage name="message" component="div" className="text-red-500" />
                             {touched.message && errors.message && <div className="text-red-500">{errors.message}</div>}
                         </div>

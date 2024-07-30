@@ -1,4 +1,5 @@
 import styles from '../../App.module.css'
+import {ErrorMessage, Field} from "formik";
 export default function DateChoosing(){
     const Text =()=>{
        return  (
@@ -12,25 +13,50 @@ export default function DateChoosing(){
             </p>
        )
     }
-    const Inputs =()=> {
-        return (
-            <div className={`flex flex-col ml-[7%] mr-[5%] ${styles.inputs}`}>
-                <div className={'flex flex-col mt-[5%]'}>
-                    <p>Name</p>
-                    <input type="text"/>
-                    <p>Phone</p>
-                    <input type="number" className={'border-2'}/>
-                    <p>Proposed Date and Time</p>
-                    <input type="text"/>
-                    <p>Message</p>
-                    <textarea/>
-                </div>
-                <div className={'flex justify-center items-center my-[30px] ml-[-20%]'}>
-                    <button className={'bg-[#756961] py-[10px] text-white px-[40px] rounded-[10px]'}>Send</button>
-                </div>
+    // const Inputs =()=> {
+    //     return (
+    //         <div className={`flex flex-col ml-[7%] mr-[5%] ${styles.inputs}`}>
+    //             <div className={'flex flex-col mt-[5%]'}>
+    //                 <p>Name</p>
+    //                 <input type="text"/>
+    //                 <p>Phone</p>
+    //                 <input type="number" className={'border-2'}/>
+    //                 <p>Proposed Date and Time</p>
+    //                 <input type="text"/>
+    //                 <p>Message</p>
+    //                 <textarea/>
+    //             </div>
+    //             <div className={'flex justify-center items-center my-[30px] ml-[-20%]'}>
+    //                 <button className={'bg-[#756961] py-[10px] text-white px-[40px] rounded-[10px]'}>Send</button>
+    //             </div>
+    //         </div>
+    //     )
+    // }
+
+    const Inputs = () => (
+        <div className={`flex flex-col ml-[7%] mr-[5%] ${styles.inputs}`}>
+            <div className={'flex flex-col mt-[5%]'}>
+                <label htmlFor="name">Name</label>
+                <Field name="name" type="text" className={'border-2'} />
+                <ErrorMessage name="name" component="div" className="text-red-500" />
+
+                <label htmlFor="phone">Phone</label>
+                <Field name="phone" type="number" className={'border-2'} />
+                <ErrorMessage name="phone" component="div" className="text-red-500" />
+
+                <label htmlFor="date">Proposed Date and Time</label>
+                <Field name="date" type="text" className={'border-2'} />
+                <ErrorMessage name="date" component="div" className="text-red-500" />
+
+                <label htmlFor="message">Message</label>
+                <Field name="message" as="textarea" className={'border-2'} />
+                <ErrorMessage name="message" component="div" className="text-red-500" />
             </div>
-        )
-    }
+            <div className={'flex justify-center items-center my-[30px] ml-[-20%]'}>
+                <button type="submit" className={'bg-[#756961] py-[10px] text-white px-[40px] rounded-[10px]'}>Send</button>
+            </div>
+        </div>
+    );
     const Header=()=>{
         return (
             <p className={`${styles.benefit} text-[300%] text-center`}>

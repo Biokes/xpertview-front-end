@@ -35,9 +35,7 @@ export default function FormText() {
     });
 
     const handleSubmit = (values, { resetForm }) => {
-        // Simulate a form submission
         try {
-            // Add your form submission logic here
             console.log(values);
             toast.success("Form submitted successfully!", {
                 position: "top-center",
@@ -63,7 +61,7 @@ export default function FormText() {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center bg-gray-300">
             <ToastContainer />
             <Formik
                 initialValues={{ name: '', phoneNumber: '', message: '' }}
@@ -80,7 +78,7 @@ export default function FormText() {
                                 className={`border-2 w-[80vw] sm:w-[350px] lg:w-[450px] h-[40px] 
                                     ${errors.name && touched.name ? 'border-red-500' : 'border-gray-500'}`}
                             />
-                            {errors.name && touched.name ? <div className="text-red-500">{errors.name}</div> : null}
+                            {errors.name && touched.name ? <div className="text-red-500 text-sm">{errors.name}</div> : null}
 
                             <p className="mb-[1%] mt-[1%]">Phone</p>
                             <Field
@@ -89,7 +87,7 @@ export default function FormText() {
                                 className={`border-2 h-[40px] w-[80vw] sm:w-[350px] lg:w-[450px] 
                                     ${errors.phoneNumber && touched.phoneNumber ? 'border-red-500' : 'border-gray-500'}`}
                             />
-                            {errors.phoneNumber && touched.phoneNumber ? <div className="text-red-500">{errors.phoneNumber}</div> : null}
+                            {errors.phoneNumber && touched.phoneNumber ? <div className="text-red-500 text-xs">{errors.phoneNumber}</div> : null}
 
                             <p className="mb-[1%] mt-[1%]">Message</p>
                             <Field
@@ -98,10 +96,10 @@ export default function FormText() {
                                 className={`h-[150px] border-2 w-[80vw] sm:w-[350px] lg:w-[450px] 
                                     ${errors.message && touched.message ? 'border-red-500' : 'border-gray-500'}`}
                             />
-                            {errors.message && touched.message ? <div className="text-red-500">{errors.message}</div> : null}
+                            {errors.message && touched.message ? <div className="text-red-500 text-sm">{errors.message}</div> : null}
                         </div>
                         <div className="flex justify-center items-center">
-                            <button type="submit" className="justify-center bg-[#756961] px-[40%] py-[20%] text-[#fff] rounded-[12px]">Send</button>
+                            <button type="submit" className="justify-center bg-[#756961] w-[100px] h-[40px] text-[#fff] rounded-[12px]">Send</button>
                         </div>
                     </Form>
                 )}

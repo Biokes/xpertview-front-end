@@ -39,7 +39,8 @@ const Navbar = () => {
                         </div>
                     </div>
                     {menuOpen && (
-                        <ul className='md:hidden absolute top-[20px] left-0 w-[120px] bg-gray-200 shadow-md text-lg'>
+                        <ul className='md:hidden absolute top-[20px] left-0 w-[120px] bg-gray-200
+                        z shadow-md text-lg'>
                             <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/home')}}>Home</li>
                             <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/training')}}>Training</li>
                             <li className='list-none hover:text-gray-600 cursor-pointer' onClick={()=>{Navigate('/coaching')}}>Coaching</li>

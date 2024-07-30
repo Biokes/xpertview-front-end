@@ -33,11 +33,14 @@ export default function Home() {
                         or achieve your life goals, our system is designed to guide you every step
                         of the way.
                     </p>
-                    <button onClick={()=>{Navigate('/contact')}}
-                        className={`mt-[20px] ml-[22vw] md:ml-[400px]
-                         border-2 order-4 row-span-1 col-span-1 w-[11%] md:w-[30%]
-                          lg:mt-[120px] md:text-xs text-neutral-950 md:h-[40px] md:font-bold`}>
-                        Individual Consultation</button>
+                    <div className='order-4 justify-center items-center mx-auto'>
+                        <button onClick={()=>{Navigate('/contact')}}
+                                className={`ml-[200px] md:ml-[400px] w-[200px]
+                         border-2 row-span-1 col-span-1  md:w-[30%]
+                          md:text-xs text-neutral-950 md:h-[40px] md:font-bold`}>
+                            Individual Consultation</button>
+                    </div>
+
                 </div>
             </div>
         )

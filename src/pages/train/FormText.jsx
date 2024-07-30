@@ -1,27 +1,3 @@
-// export default function FormText(){
-//     const validation = {
-//         'name':/^[a-zA-Z ]{5,}/,
-//         'phoneNumber':/^[0-9]{10,14}/,
-//     }
-//     return (
-//             <div className={`flex flex-col justify-center items-center`}>
-//                 <div className={`my-[2%]  items-start`}>
-//                     <p className={`mb-[1%] w-[100%]`}>Name Surname</p>
-//                     <input type="text"
-//                            className='border-2 border-gray-500 w-[80vw] sm:w-[350px]
-//                         lg:w-[450px] h-[40px]'/>
-//                     <p className={`mb-[1%] mt-[1%]`}>Phone</p>
-//                     <input type="text" className='border-2 h-[40px] border-gray-500 w-[80vw] sm:w-[350px] lg:w-[450px]'/>
-//                     <p className={`mb-[1%] mt-[1%]`}>Message</p>
-//                     <textarea
-//                         className="h-[150px] border-2  border-gray-500 w-[80vw] sm:w-[350px] lg:w-[450px]"/>
-//                 </div>
-//                 <div className={'flex justify-center items-center'}>
-//                     <button className="justify-center bg-[#756961] px-[40%] py-[20%] text-[#fff] rounded-[12px]" >Send</button>
-//                 </div>
-//         </div>
-//     )
-// }
 import { Formik, Field, Form } from "formik";
 import * as Yup from 'yup';
 import { toast, ToastContainer } from "react-toastify";
@@ -33,7 +9,6 @@ export default function FormText() {
         phoneNumber: Yup.string().matches(/^[0-9]{10,14}$/, 'Phone number should be between 10 and 14 digits').required('Phone number is required'),
         message: Yup.string().required('Message is required')
     });
-
     const handleSubmit = (values, { resetForm }) => {
         try {
             console.log(values);
@@ -59,10 +34,8 @@ export default function FormText() {
             });
         }
     };
-
     return (
         <div className="flex flex-col justify-center items-center bg-gray-300">
-            <ToastContainer />
             <Formik
                 initialValues={{ name: '', phoneNumber: '', message: '' }}
                 validationSchema={validationSchema}
@@ -104,6 +77,7 @@ export default function FormText() {
                     </Form>
                 )}
             </Formik>
+            <ToastContainer />
         </div>
     );
 }

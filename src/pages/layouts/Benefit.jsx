@@ -2,8 +2,7 @@ import pics from '../../assets/coach-london.jpeg'
 import styles from '../../App.module.css'
 export default function Benefit(){
     return (
-        <div className={`bg-[#DDD5CE] flex flex-col justify-center items-center
-         w-[100vw] lg:w-[1210px] pb-[80px] max-w-[1915px]`}>
+        <div className={`bg-[#DDD5CE] flex flex-col justify-center items-center`}>
             <p className={`${styles.benefit} text-2xl md:text-5xl font-bold text-center 
             py-[40px]`}>Benefit of Coaching</p>
             <div className={`flex flex-col justify-center items-center lg:flex lg:flex-row`}>

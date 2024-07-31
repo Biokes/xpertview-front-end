@@ -17,11 +17,11 @@ const Navbar = () => {
         <div className={`justify-center items-center`}>
             <div className={`shadow-md justify-center items-center`}>
                 <div className='flex justify-between items-center p-4  bg-white'>
-                    <div className='flex flex-col justify-center align-center max-h-[120px]'>
+                    <div className='flex flex-col justify-center align-center max-h-[120px] ml-[20px]'>
                         <p className={`${styles.headerText} lg:font-bold sm:text-sm lg:text-lg  xl:text-2xl`}>Xpert View</p>
                         <p className='font-semibold sm:text-sm lg:text-[14px] xl:text-2xl'>Life Coach</p>
                     </div>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col mr-[20px]'>
                         <div className={`flex justify-end mr-[2vw] ${styles.svg}`}>
                             <a href="https://www.facebook.com"><img className={'h-[30px] w-[30px]'} src={Facebook}
                                                                     alt='fb'/></a>

@@ -35,7 +35,7 @@ export default function FormText() {
         }
     };
     return (
-        <div className="flex flex-col justify-center items-center bg-gray-300">
+        <div className="flex flex-col justify-center items-center bg-gray-200">
             <Formik
                 initialValues={{ name: '', phoneNumber: '', message: '' }}
                 validationSchema={validationSchema}
@@ -44,11 +44,12 @@ export default function FormText() {
                 {({ errors, touched }) => (
                     <Form className="flex flex-col justify-center items-center">
                         <div className="my-[2%] items-start">
-                            <p className="mb-[1%] w-[100%]">Name Surname</p>
+                            <p className="mb-[1%] w-[100%]">Fullname</p>
                             <Field
                                 type="text"
                                 name="name"
-                                className={`border-2 w-[80vw] sm:w-[350px] lg:w-[450px] h-[40px] 
+                                placeholder="Fullname"
+                                className={`border rounded-[5px] w-[80vw] sm:w-[350px] lg:w-[450px] h-[40px] pl-[10px] 
                                     ${errors.name && touched.name ? 'border-red-500' : 'border-gray-500'}`}
                             />
                             {errors.name && touched.name ? <div className="text-red-500 text-sm">{errors.name}</div> : null}
@@ -57,7 +58,8 @@ export default function FormText() {
                             <Field
                                 type="text"
                                 name="phoneNumber"
-                                className={`border-2 h-[40px] w-[80vw] sm:w-[350px] lg:w-[450px] 
+                                placeholder="PhoneNumber"
+                                className={`rounded-[4px] border h-[40px] w-[80vw] sm:w-[350px] lg:w-[450px] pl-[10px] 
                                     ${errors.phoneNumber && touched.phoneNumber ? 'border-red-500' : 'border-gray-500'}`}
                             />
                             {errors.phoneNumber && touched.phoneNumber ? <div className="text-red-500 text-xs">{errors.phoneNumber}</div> : null}
@@ -66,13 +68,15 @@ export default function FormText() {
                             <Field
                                 name="message"
                                 as="textarea"
-                                className={`h-[150px] border-2 w-[80vw] sm:w-[350px] lg:w-[450px] 
+                                placeholder="Message"
+                                className={`h-[150px] border rounded-[5px] w-[80vw] sm:w-[350px] lg:w-[450px] pl-[10px] 
                                     ${errors.message && touched.message ? 'border-red-500' : 'border-gray-500'}`}
                             />
                             {errors.message && touched.message ? <div className="text-red-500 text-sm">{errors.message}</div> : null}
                         </div>
                         <div className="flex justify-center items-center">
-                            <button type="submit" className="justify-center bg-[#756961] w-[100px] h-[40px] text-[#fff] rounded-[12px]">Send</button>
+                            <button type="submit" className="justify-center  items-center bg-[#756961] w-[70px] h-[30px]
+                            text-[#fff] text-sm rounded-[5px]">Send</button>
                         </div>
                     </Form>
                 )}

@@ -23,7 +23,7 @@ export default function Choose(){
                     <p className='text-center py-[15px] px-[40px] text-xl'>
                         I cordially invite you to the training, the next training date is August 22, 2024</p>
                     <button onClick={()=>Navigate('/training')}
-                        className='my-[20px] bg-white text-[#000000] px-[3vw] py-[1vw] rounded-[5px]'>
+                        className='my-[20px] bg-white text-[#000000] px-[1vw] py-[0.6vw] rounded-[5px]'>
                         Sign up for training</button>
                 </div>
                 <div className="bg-[#756961] text-white md:w-[500px] px-[20px]
@@ -33,7 +33,7 @@ export default function Choose(){
                         I cordially invite you for a consultation, call me and
                          we will arrange an appointment.</p>
                     <button onClick={()=>{Navigate('/coaching')}}
-                    className='my-[20px] bg-white text-[#000000] px-[3vw] py-[1vw] rounded-[5px]'>
+                    className='my-[20px] bg-white text-[#000000] px-[1vw] py-[0.6vw] rounded-[5px]'>
                     Individual meeting</button>
                 </div>
             </div>

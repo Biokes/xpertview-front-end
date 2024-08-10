@@ -23,7 +23,7 @@ export default function Consultation(){
                 <p className={`text-center text-2xl ${styles.benefit} font-thin my-3`}>
                     What Does Consultation look like?</p>
                 <button  onClick={()=>{Navigate('/contact')}}
-                    className={'px-5 font-thin my-3 border-neutral-950 border-2'} >Sign up for a consultation</button>
+                    className={'px-5 font-thin my-3 border-neutral-950 border'} >Sign up for a consultation</button>
                 <img src={coach} className={'order-3 overflow-hidden w-[80vw] sm:w-[70vw] ' +
                     'sm:my-auto h-[100vw] sm:h-[300px] mx-auto '} alt="coach"/>
                 <div className={'font-thin text-sm my-5 md:justify-center items-center'}><Paragraph/></div>
@@ -45,7 +45,7 @@ export default function Consultation(){
                         <Paragraph/>
                     </div>
                     <button onClick={()=>{Navigate('/contact')}}
-                        className={'px-5 py-[4px] lg:my-[5%] text-thin border-neutral-950 border-2'}>
+                        className={'px-5 py-[4px] lg:my-[5%] text-thin border-neutral-950 border hover:animate-pulse'}>
                         Sign up for a consultation</button>
                 </div>
             </div>

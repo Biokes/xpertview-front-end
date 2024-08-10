@@ -10,11 +10,12 @@ export default function Home() {
         return (
             <div className="flex flex-col justify-center items-center lg:hidden">
                 <div className="grid grid-rows-2 grid-cols-2 " >
-                    <img src={laff} className="h-[150px] order-1 ml-[30%]" alt="img"/>
-                    <p className='text-3xl order-2 text-center flex justify-center items-center mr-[10%]'>
+                    <img src={laff} className="w-[120px] rounded-[4px] order-1 ml-[30%]" alt="img"/>
+                    <p className={`text-2xl order-2 text-center flex justify-center items-center mr-[20%]
+                         ${styles.header} sm:text-6xl`}>
                         We can do more together
                     </p>
-                    <p className='order-3 col-span-2 mx-[10px]'>
+                    <p className='order-3 col-span-2 mx-[30px] sm:text-[20px] sm:mt-[2%]'>
                         At Xpert View, we believe in empowering individuals to reach their fullest
                         potential through personalized coaching and comprehensive training programs.
                         Whether you are looking to improve your personal skills, advance your career,
@@ -41,7 +42,7 @@ export default function Home() {
                             shadow-2xl overflow-hidden hidden lg:flex`} alt="img" />
                 <div className={`flex-col mx-[70px] h-[400px] w-[700px] 
                             grid grid-rows-3 grid-cols-1 ${styles.grid}`}>
-                    <p className={`text-4xl hidden lg:flex justify-center items-start`}>
+                    <p className={`text-5xl ${styles.header} hidden lg:flex justify-center items-start`}>
                         We can do more together
                     </p>
                     <p className='text-lg font-md hidden lg:flex lg:text-start lg:mx-auto'>
